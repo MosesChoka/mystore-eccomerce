@@ -18,6 +18,8 @@ class Admin::StocksController < AdminController
 
   # GET /admin/stocks/1/edit
   def edit
+    @product = Product.find(params[:id])
+    @admin_stock = Stock.find(params[:id])
   end
 
   # POST /admin/stocks or /admin/stocks.json
